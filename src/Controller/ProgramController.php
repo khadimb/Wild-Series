@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Program;
+use App\Entity\Season;
+use App\Entity\Episode;
 
 /**
  * @Route("/programs", name="program_")
@@ -48,8 +50,37 @@ class ProgramController extends AbstractController
             );
         }
 
+        $seasons = $this->getDoctrine()
+            ->getRepository(Season::class)
+            ->findBy(['program' => $id]);
+
         return $this->render('program/show.html.twig', [
             'program' => $program, 
+            'seasons' => $seasons,
+        ]);
+    }
+     /**
+      * @Route("/{programId}/seasons/{seasonId}", name="season_show")
+      * @return Response
+      */
+    public function showSeason(int $programId, int $seasonId): Response
+    {
+        $program = $this->getDoctrine()
+            ->getRepository(Program::class)
+            ->findOneBy(['id' => $programId]);
+
+        $seasons = $this->getDoctrine()
+            ->getRepository(Season::class)
+            ->findOneBy(['id' => $seasonId]);
+
+        $episodes = $this->getDoctrine()
+            ->getRepository(Episode::class)
+            ->findBy(['season' => $seasonId]);
+
+        return $this->render('program/season_show.html.twig', [
+            'program' => $program, 
+            'seasons' => $seasons,
+            'episodes' => $episodes,
         ]);
     }
 }
