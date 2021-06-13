@@ -18,3 +18,7 @@ https://www.youtube.com/playlist?list=PLqOwfj2Wrry0ixoHDoZMe3uBbUGnmCWFp
 13 - CRUD 
 
 https://www.youtube.com/watch?v=9PxFKIDkbtI
+
+14 - Validation
+
+https://youtu.be/iiyZ0bQqgcA
