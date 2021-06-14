@@ -27,4 +27,7 @@ https://youtu.be/iiyZ0bQqgcA
 
 https://youtu.be/J95shnhxWYc
 
+16 - Entitype 
+
+https://youtu.be/upWdYuKATeM
 
