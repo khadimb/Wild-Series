@@ -31,3 +31,7 @@ https://youtu.be/J95shnhxWYc
 
 https://youtu.be/upWdYuKATeM
 
+17 - Fixtures avancées 
+
+https://www.youtube.com/watch?v=Q64PJ1-I20Y
+
